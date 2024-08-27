@@ -1,7 +1,75 @@
-body {
+:root {
+  --lg-space: 300px;
+  --md-space: 100px;
+  --sm-space: 50px;
+  --xs-space: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body,
+figure {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
   margin: 0;
   padding: 0;
 }
-header {
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+main {
   background-color: lightseagreen;
+}
+
+header {
+  padding: var(--sm-space) var(--lg-space);
+  align-items: center;
+}
+
+header > * {
+  flex: 1;
+}
+header figure {
+  position: relative;
+}
+
+header figure img {
+  width: 100%;
+}
+
+header figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  bottom: 0;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+header section {
+  background-color: white;
+  flex-direction: column;
+  padding: var(--md-space);
+}
+
+header div {
+  gap: var(--xs-space);
+  justify-content: end;
+}
+
+header p {
+  text-align: justify;
+  font-size: 1.5rem;
 }
