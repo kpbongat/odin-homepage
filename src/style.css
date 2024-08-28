@@ -9,6 +9,8 @@
 }
 
 body,
+h1,
+h2,
 figure {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -29,7 +31,8 @@ main {
   background-color: lightseagreen;
 }
 
-header {
+header,
+main > section {
   padding: var(--sm-space) var(--lg-space);
   align-items: center;
 }
@@ -64,7 +67,7 @@ header section {
   padding: var(--md-space);
 }
 
-header div {
+header .icon-group {
   gap: var(--xs-space);
   justify-content: end;
 }
@@ -72,4 +75,33 @@ header div {
 header p {
   text-align: justify;
   font-size: 1.5rem;
+}
+
+main > section {
+  background-color: white;
+}
+.projects {
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sm-space);
+}
+
+.card {
+  flex-direction: column;
+  box-shadow: lightgray 0px 5px 10px 1px;
+}
+.card-thmb {
+  background-color: gray;
+  min-height: 250px;
+}
+
+.card-detail {
+  background-color: white;
+  padding: var(--xs-space);
+  min-height: 200px;
+}
+
+.card-detail .icon-group {
+  flex: 1;
+  gap: var(--xs-space);
+  justify-content: end;
 }
