@@ -9,6 +9,7 @@
 }
 
 body,
+p,
 h1,
 h2,
 figure {
@@ -32,7 +33,8 @@ main {
 }
 
 header,
-main > section {
+main > section,
+footer {
   padding: var(--sm-space) var(--lg-space);
   align-items: center;
 }
@@ -104,4 +106,27 @@ main > section {
   flex: 1;
   gap: var(--xs-space);
   justify-content: end;
+}
+
+footer {
+  background-color: lightseagreen;
+  color: white;
+}
+
+footer section {
+  flex-direction: column;
+  gap: var(--xs-space);
+}
+
+footer .contact {
+  flex-direction: column;
+}
+
+.contact div {
+  align-items: center;
+  gap: var(--xs-space);
+}
+
+footer .icon-group {
+  gap: var(--xs-space);
 }
