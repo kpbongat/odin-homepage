@@ -1,6 +1,6 @@
 :root {
-  --lg-space: 300px;
-  --md-space: 100px;
+  --lg-space: 15%;
+  --md-space: 5%;
   --sm-space: 50px;
   --xs-space: 10px;
 }
@@ -39,10 +39,8 @@ footer {
   align-items: center;
 }
 
-header > * {
-  flex: 1;
-}
 header figure {
+  flex: 1;
   position: relative;
 }
 
@@ -64,6 +62,7 @@ header figcaption {
 }
 
 header section {
+  flex: 1;
   background-color: white;
   flex-direction: column;
   padding: var(--md-space);
@@ -83,7 +82,7 @@ main > section {
   background-color: white;
 }
 .projects {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--sm-space);
 }
 
@@ -129,4 +128,10 @@ footer .contact {
 
 footer .icon-group {
   gap: var(--xs-space);
+}
+
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+  }
 }
